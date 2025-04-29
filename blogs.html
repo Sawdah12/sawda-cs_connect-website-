@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Blogs
-permalink: /blogs.html
+permalink: /blogs/
 ---
 
 <header class="hero animated-bg-container">
@@ -54,7 +54,7 @@ permalink: /blogs.html
                             <i class="fas fa-user-circle"></i>
                             <span>Author: {{ post.author }}</span>
                         </div>
-                        <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">
+                        <a href="{{ post.url | relative_url }}" class="read-more">
                             <i class="fas fa-book-reader"></i>
                             Read Article
                         </a>
@@ -66,4 +66,4 @@ permalink: /blogs.html
     </section>
 </main>
 
-<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/blogs-styles.css"> 
+<link rel="stylesheet" href="{{ '/assets/css/blogs-styles.css' | relative_url }}">
